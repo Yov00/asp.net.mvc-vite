@@ -2,7 +2,7 @@ using Vite.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddViteServices(opts=>{
         opts.Server.AutoRun = true;
