@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+@section Scripts{
+     <script type="module" vite-src="~/src/privacy.ts" asp-append-version="true" defer></script>
+}
+<h1>@ViewData["Title"]</h1>
+
+<p id="clickable">Use this page to detail your site's privacy policy.</p>
+
+
+<div id="swapit">
+    <div class="slot top" data-swapy-slot="a">
+        <div class="item item-a" data-swapy-item="a">
+          <div>A</div>
+        </div>
+      </div>
+
+      <div class="middle">
+        <div class="slot middle-left" data-swapy-slot="b">
+          <div class="item item-b" data-swapy-item="b">
+            @* <div class="handle" data-swapy-handle></div> *@
+            <div>B</div>
+          </div>
+        </div>
+        <div class="slot middle-right" data-swapy-slot="c"></div>
+      </div>
+
+      <div class="slot bottom" data-swapy-slot="d">
+        <div class="item item-d" data-swapy-item="d">
+          <div>D</div>
+        </div>
+
+</div>

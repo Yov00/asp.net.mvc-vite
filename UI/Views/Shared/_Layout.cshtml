@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UI</title>
+    <environment  include="Production">
+        <link rel="stylesheet" vite-href="~/src/main.ts" asp-append-version="true" />
+        <script type="module" vite-src="~/src/main.ts" asp-append-version="true" defer></script>
+        @* <link rel="stylesheet" vite-href="~/main.js" asp-append-version="true"/>  *@
+    </environment>
+    
+    <environment  include="Development">
+        <link rel="stylesheet" href="~/index.css" asp-append-version="true" />
+        <script type="module" src="~/index.js" asp-append-version="true" defer></script>
+    </environment>
+
+    
+</head>
+<body>
+    <header>
+      <h1>CMON</h1>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
