@@ -1,4 +1,19 @@
 import {defineConfig} from 'vite'
+import {glob} from 'glob';
+import {resolve,relative} from 'path';
+
+
+const entries: any = {};
+const entryFiles = glob.sync('src/*.{js,ts,jsx,tsx}');
+
+
+entryFiles.forEach(file => {
+    const filename: string | undefined = file.split('/').pop()?.split('.')[0];
+    if (filename) {
+        entries[filename] = file;
+    }
+});
+
 export default defineConfig({
     appType: "custom",
     root: './',
@@ -8,9 +23,7 @@ export default defineConfig({
         emptyOutDir: true,
         assetsDir: '',
         rollupOptions: {
-            // input: {
-            //     main: 'src/main.ts',
-            // },
+            input: entries,
             output: {
                 entryFileNames: '[name].js',
                 chunkFileNames: '[name].js',

@@ -1,11 +1,52 @@
 {
-  "index.html": {
-    "file": "index.js",
-    "name": "index",
-    "src": "index.html",
+  "_style.css": {
+    "file": "style.css",
+    "src": "_style.css"
+  },
+  "_swapy.js": {
+    "file": "swapy.js",
+    "name": "swapy"
+  },
+  "src/NewStuff.ts": {
+    "file": "src\\NewStuff.js",
+    "name": "src\\NewStuff",
+    "src": "src/NewStuff.ts",
+    "isEntry": true
+  },
+  "src/layout.ts": {
+    "file": "src\\layout.js",
+    "name": "src\\layout",
+    "src": "src/layout.ts",
     "isEntry": true,
     "css": [
-      "index.css"
+      "style.css"
     ]
+  },
+  "src/main.ts": {
+    "file": "src\\main.js",
+    "name": "src\\main",
+    "src": "src/main.ts",
+    "isEntry": true,
+    "imports": [
+      "_swapy.js"
+    ],
+    "css": [
+      "style.css"
+    ]
+  },
+  "src/privacy.ts": {
+    "file": "src\\privacy.js",
+    "name": "src\\privacy",
+    "src": "src/privacy.ts",
+    "isEntry": true,
+    "imports": [
+      "_swapy.js"
+    ]
+  },
+  "src/vite-env.d.ts": {
+    "file": "src\\vite-env.js",
+    "name": "src\\vite-env",
+    "src": "src/vite-env.d.ts",
+    "isEntry": true
   }
 }
