@@ -10,10 +10,10 @@
         @* <link rel="stylesheet" vite-href="~/main.js" asp-append-version="true"/>  *@
     </environment>
     
-    @* <environment  include="Development">
-        <link rel="stylesheet" href="~/index.css" asp-append-version="true" />
-        <script type="module" src="~/index.js" asp-append-version="true" defer></script>
-    </environment> *@
+    <environment  include="Production">
+        <link rel="stylesheet" href="~/style.css" asp-append-version="true" />
+        <script type="module" src="~/src/main.js" asp-append-version="true" defer></script>
+    </environment>
 
     
 </head>
