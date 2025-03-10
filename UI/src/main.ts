@@ -1,3 +1,10 @@
 import "./layout";
 import "./NewStuff";
-import "./privacy";
+import { TestStore } from "./TestStore";
+
+
+// Init stores
+
+export const testStore = new TestStore();
+
+

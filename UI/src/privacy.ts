@@ -1,5 +1,12 @@
 import {createSwapy} from "swapy";
+import { testStore } from "./main";
+
 const clickable = document.querySelector("#clickable");
+
+console.log(testStore.parts)
+console.log(testStore.addParts("Ronnie Carson"))
+console.log(testStore.parts)
+
 if(clickable){
     clickable.addEventListener("click",(e:any)=>{
         const el = e.target;

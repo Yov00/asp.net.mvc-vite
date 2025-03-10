@@ -1,7 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+ @section Scripts{
+    <environment include="Development">
+        <script type="module" vite-src="~/src/home.ts" asp-append-version="true" defer></script>
+    </environment>
+ }
 <a href="/home/privacy" style="color:white">
 Another page >
 </a>
