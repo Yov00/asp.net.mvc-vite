@@ -4,7 +4,7 @@ import {resolve,relative} from 'path';
 
 
 const entries: any = {};
-const entryFiles = glob.sync('src/*.{js,ts,jsx,tsx}');
+const entryFiles = glob.sync('src/*/**.{js,ts,jsx,tsx}');
 
 
 entryFiles.forEach(file => {

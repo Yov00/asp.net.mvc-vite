@@ -1,13 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Testing it";
 }
 
 @section Scripts {
   <environment include="Development">
-    <script type="module" vite-src="~/src/privacy.ts" asp-append-version="true" defer></script>
+    <script type="module" vite-src="~/src/testing.ts" asp-append-version="true" defer></script>
   </environment>
   <environment include="Production">
-    <script type="module" vite-src="~/src/privacy.js" asp-append-version="true" defer></script>
+    <script type="module" vite-src="~/src/testing.js" asp-append-version="true" defer></script>
   </environment>
 }
 <h1>@ViewData["Title"]</h1>
