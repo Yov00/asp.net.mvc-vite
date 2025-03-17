@@ -1,14 +1,26 @@
-import { makeObservable, runInAction} from "mobx"
+import { makeObservable, runInAction } from "mobx";
 
-export class TestStore{
-    parts:any[] = []
-    constructor(){
-        makeObservable(this)
-    }
+interface IPart {
+  id: number;
+  name: string;
+}
+export class TestStore {
+  parts: IPart[] = [];
+  constructor() {
+    makeObservable(this);
+  }
 
-    addParts=(data:any)=>{
-        runInAction(()=>{
-            this.parts = [...this.parts,data]
-        })
+  addParts = (data: IPart) => {
+    runInAction(() => {
+      this.parts = [...this.parts, data];
+    });
+  };
+
+  removePart = (_id: number) => {
+    if (_id > 0) {
+      runInAction(() => {
+        this.parts = this.parts.filter((p) => p.id != _id);
+      });
     }
+  };
 }
